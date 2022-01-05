@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My first Web application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+
+        <table class="table table-dark text-center">
+            <thead>
+            <tr>
+                <th scope="col">Schedule</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="sch : ${schedule}">
+                <td><span th:text="${sch.getCourse_name()}"> Title </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
